@@ -59,8 +59,8 @@ main header {
   font-style: italic;
 }
 
-main h2{
-    text-align: center;
+main h2 {
+  text-align: center;
 }
 
 footer {
@@ -86,17 +86,17 @@ footer {
   margin-top: 0px;
 }
 
-#navi{
-    margin-top: 0px;
-    margin-left: 25px;
+#navi {
+  margin-top: 0px;
+  margin-left: 25px;
 }
 
-#social{
-    text-align: center;
-    font-size: 30px;
+#social {
+  text-align: center;
+  font-size: 30px;
 }
 
-#social a{
-    padding-left: 8px;
-    padding-right: 8px;
+#social a {
+  padding-left: 8px;
+  padding-right: 8px;
 }

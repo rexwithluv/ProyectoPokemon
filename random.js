@@ -1,8 +1,6 @@
 function random() {
   var lista = [
     "../pokemon/turtwig.html",
-    "../pokemon/pokemon.html",
-    "../pokemon/pokemon.html",
     "../pokemon/grotle.html",
     "../pokemon/torterra.html",
     "../pokemon/chimchar.html",
