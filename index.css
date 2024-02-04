@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Pokemon DP Pro";
+  src: url("fonts/pokemon-dp-pro.ttf") format("truetype");
+}
+
+body {
+  font-family: "Pokemon DP Pro", sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  margin: 0px;
+  background-color: #fafafa;
+}
+
+nav {
+  background-color: #ffe65a;
+  font-size: 26px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+nav table {
+  height: 75px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+
+  border: 0;
+}
+
+nav table td {
+  cursor: pointer;
+  height: 50px;
+  width: 20%;
+  border-collapse: collapse;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+nav table td:hover {
+  background-color: #ffe44b;
+  transform: scale(1.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+main h3 {
+  margin-top: -25px;
+}
+
+main ul li {
+  list-style-image: url("images/pokeball-ul-14px.png");
+  margin-bottom: 7px;
+}
+
+main ul li a {
+  color: #4b66ff;
+  transition: transform 0.3s ease-in-out;
+  font-style: italic;
+}
+
+main ul li a:hover {
+  color: #8a4bff;
+  position: relative;
+  bottom: 3px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+  background-color: #ffe65a;
+}
+
+#myself {
+  font-style: italic;
+  text-decoration: underline;
+}
