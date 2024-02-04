@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="random.js"></script>
 
     <title>Inicio</title>
     <link rel="stylesheet" href="index.css" />
@@ -12,7 +13,7 @@
     <nav>
       <table>
         <tr>
-          <td onclick="window.location.href='random.html';">Randomizador</td>
+          <td onclick="random();">Randomizador</td>
           <td onclick="window.location.href='all.html';">Toda la pokédex</td>
           <td onclick="window.location.href='index.html';">Inicio</td>
           <td onclick="window.location.href='team.html';">Equipo</td>
@@ -40,7 +41,7 @@
           Vetusta, en el garaje del edificio del equipo Plasma.
         </li>
         <li>
-          <a href="random.html">Randomizador:</a> Te apetece ver algún pokémon
+          <a href="#" onclick="random()">Randomizador:</a> Te apetece ver algún pokémon
           de la región pero no sabes cuál? Dale click para que te lleve a una
           página aleatoria!
         </li>
