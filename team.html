@@ -28,38 +28,24 @@
 
     <div id="team">
       <h2>Introduce tu equipo!</h2>
-      <form action="get">
-        <form id="formularioTarjeta">
-          <label for="trainer-id">ID:</label>
-          <input type="text" id="trainer-id" name="trainer-id" disabled />
+      <form action="get" id="formularioTarjeta">
+        <label for="trainer-id">ID:</label>
+        <input type="text" id="trainer-id" name="trainer-id" disabled />
 
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required />
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
 
-          <label for="pokemonElegido">Pokémon Elegido:</label>
-          <select id="pokemonElegido" name="pokemonElegido" required>
+        <label for="pokemonElegido">Pokémon inicial:</label>
+        <select id="pokemonElegido" name="pokemonElegido" required>
             <option value="null">Elige tu inicial!</option>
             <option value="turtwig">Turtwig</option>
-            <option value="chimchar">chimchar</option>
+            <option value="chimchar">Chimchar</option>
             <option value="piplup">Piplup</option>
-          </select>
+        </select>
 
-          <table border="1px solid">
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
-
-          <button type="button" onclick="generarTarjeta()">Almacenar</button>
-        </form>
-      </form>
+        <div id="mensaje"></div>
+        <button type="button" id="boton">Almacenar</button>
+    </form>
     </div>
 
     <footer>
