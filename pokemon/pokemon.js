@@ -50,6 +50,39 @@ function obtenerInformacionPokemon(pokemonName) {
       fairy: "#ee99ac",
     };
 
+    function oscurecerColor(color, cant) {
+      //voy a extraer las tres partes del color
+      var rojo = color.substr(1, 2);
+      var verd = color.substr(3, 2);
+      var azul = color.substr(5, 2);
+
+      //voy a convertir a enteros los string, que tengo en hexadecimal
+      var introjo = parseInt(rojo, 16);
+      var intverd = parseInt(verd, 16);
+      var intazul = parseInt(azul, 16);
+
+      //ahora verifico que no quede como negativo y resto
+      if (introjo - cant >= 0) introjo = introjo - cant;
+      if (intverd - cant >= 0) intverd = intverd - cant;
+      if (intazul - cant >= 0) intazul = intazul - cant;
+
+      //voy a convertir a hexadecimal, lo que tengo en enteros
+      rojo = introjo.toString(16);
+      verd = intverd.toString(16);
+      azul = intazul.toString(16);
+
+      //voy a validar que los string hexadecimales tengan dos caracteres
+      if (rojo.length < 2) rojo = "0" + rojo;
+      if (verd.length < 2) verd = "0" + verd;
+      if (azul.length < 2) azul = "0" + azul;
+
+      //voy a construir el color hexadecimal
+      var oscuridad = "#" + rojo + verd + azul;
+
+      //la función devuelve el valor del color hexadecimal resultante
+      return oscuridad;
+    }
+
     // Mapea los tipos a los colores correspondientes
     const coloresTipos = tipos.map((tipo) => coloresPorTipo[tipo]);
 
@@ -66,6 +99,19 @@ function obtenerInformacionPokemon(pokemonName) {
 
     const nav = document.getElementById("nav");
     nav.style.backgroundColor = color1;
+
+    // Define un estilo CSS para el nav y su estado :hover
+    const colorOscuro = oscurecerColor(color1, 25);
+    const navStyles = `
+      nav table td:hover {
+          background-color: ${colorOscuro};
+  }
+  `;
+
+    // Crea un nuevo estilo y lo agrega al head del documento
+    const styleElement = document.createElement("style");
+    styleElement.innerHTML = navStyles;
+    document.head.appendChild(styleElement);
 
     const footer = document.getElementById("footer");
     footer.style.backgroundColor = color2;
