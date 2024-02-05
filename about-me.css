@@ -12,7 +12,7 @@ body {
 }
 
 nav {
-  background-color: #ffe65a;
+  background-color: #E4C1F9;
   font-size: 26px;
   letter-spacing: 1px;
   font-weight: 600;
@@ -36,7 +36,7 @@ nav table td {
 }
 
 nav table td:hover {
-  background-color: #ffe44b;
+  background-color: #e2b0ff;
   transform: scale(1.1);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
@@ -71,7 +71,7 @@ footer {
   margin: auto;
   text-align: center;
 
-  background-color: #ffe65a;
+  background-color: #E4C1F9;
 }
 
 #myself {
@@ -100,3 +100,4 @@ footer {
   padding-left: 8px;
   padding-right: 8px;
 }
+

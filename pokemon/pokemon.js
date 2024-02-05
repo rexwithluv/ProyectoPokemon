@@ -63,11 +63,16 @@ function obtenerInformacionPokemon(pokemonName) {
     // Aplica el fondo al contenedor
     const contenedorPokemonInfo = document.getElementById("pokemon-info");
     contenedorPokemonInfo.style.background = gradient;
+
+    const nav = document.getElementById("nav");
+    nav.style.backgroundColor = color1;
+
+    const footer = document.getElementById("footer");
+    footer.style.backgroundColor = color2;
   }
 
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonName}/`;
-  document.title = `Pokémon... ${capitalizarPrimeraLetra(pokemonName)}!`
-
+  document.title = `Pokémon... ${capitalizarPrimeraLetra(pokemonName)}!`;
 
   fetch(apiUrl)
     .then((response) => response.json())

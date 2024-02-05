@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es_ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="random.js"></script>
+    <script src="team.js"></script>
+    <title>Tu propio equipo!</title>
+    <link rel="stylesheet" href="team.css" />
+    <link
+      rel="shortcut icon"
+      href="images/pokeball-ul-14px.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav>
+      <table>
+        <tr>
+          <td onclick="random();">Randomizador</td>
+          <td onclick="window.location.href='all.html';">Toda la pokédex</td>
+          <td onclick="window.location.href='index.html';">Inicio</td>
+          <td onclick="window.location.href='team.html';">Equipo</td>
+          <td onclick="window.location.href='about-me.html';">Sobre mí</td>
+        </tr>
+      </table>
+    </nav>
+
+    <div id="team">
+      <h2>Introduce tu equipo!</h2>
+      <form action="get">
+        <form id="formularioTarjeta">
+          <label for="trainer-id">ID:</label>
+          <input type="text" id="trainer-id" name="trainer-id" disabled />
+
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="pokemonElegido">Pokémon Elegido:</label>
+          <select id="pokemonElegido" name="pokemonElegido" required>
+            <option value="null">Elige tu inicial!</option>
+            <option value="turtwig">Turtwig</option>
+            <option value="chimchar">chimchar</option>
+            <option value="piplup">Piplup</option>
+          </select>
+
+          <table border="1px solid">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+
+          <button type="button" onclick="generarTarjeta()">Almacenar</button>
+        </form>
+      </form>
+    </div>
+
+    <footer>
+      <p>
+        Web creada por <span id="myself">Aarón A. Rueda</span>, alumno de 1ºDAW
+        para el módulo de LMSXI ^^
+      </p>
+    </footer>
+  </body>
+</html>

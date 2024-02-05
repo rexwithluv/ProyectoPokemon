@@ -19,8 +19,8 @@ def reemplazar_contenido(plantilla, carpeta_destino, archivos_a_excluir):
 
 
 # Rutas a la plantilla y carpeta destino
-plantilla = "test/test.html"
-carpeta_destino = "pokemon/"
+plantilla = "test.html"
+carpeta_destino = "../pokemon/"
 
 # Lista de archivos a excluir
 archivos_a_excluir = [

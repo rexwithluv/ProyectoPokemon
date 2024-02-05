@@ -13,10 +13,10 @@
     <link rel="shortcut icon" href="../images/pokeball-ul-14px.png" type="image/x-icon">
   </head>
   <body>
-    <nav>
+    <nav id="nav">
       <table>
         <tr>
-          <td onclick="random();">Randomizador</td>
+          <td onclick="random();" onmouseover="cambiarColor(this);" onmouseout="restaurarColor(this);">Randomizador</td>
           <td onclick="window.location.href='../all.html';">Toda la pokédex</td>
           <td onclick="window.location.href='../index.html';">Inicio</td>
           <td onclick="window.location.href='../team.html';">Equipo</td>
@@ -28,7 +28,7 @@
     <h1>Información de Pokémon</h2>
     <div id="pokemon-info"></div>
 
-    <footer>
+    <footer id="footer">
       <p>
         Web creada por <span id="myself">Aarón A. Rueda</span>, alumno de 1ºDAW
         para el módulo de LMSXI ^^

@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Pokemon DP Pro";
+  src: url("fonts/pokemon-dp-pro.ttf") format("truetype");
+}
+
+* {
+  font-family: "Pokemon DP Pro", sans-serif;
+}
+
+body {
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  margin: 0px;
+  background-color: #fafafa;
+}
+
+nav {
+  background-color: #ff9999;
+  font-size: 26px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+nav table {
+  height: 75px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+
+  border: 0;
+}
+
+nav table td {
+  cursor: pointer;
+  height: 50px;
+  width: 20%;
+  border-collapse: collapse;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+nav table td:hover {
+  background-color: #ff7b7b;
+  transform: scale(1.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+  background-color: #ff9999;
+}
+
+#myself {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* A partir de aquí es exclusivo de este CSS */
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  font-size: 20px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+button {
+  font-size: 25px;
+  background-color: #ff9999;
+  color: white;
+  padding: 16px 35px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  display: block;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #ff7b7b;
+  transform: scale(1.05);
+}
+
+#team h2 {
+  text-align: center;
+}
+
+#trainer-id{
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}

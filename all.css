@@ -13,7 +13,7 @@ body {
 }
 
 nav {
-  background-color: #ffe65a;
+  background-color: rgb(178, 255, 168);
   font-size: 26px;
   letter-spacing: 1px;
   font-weight: 600;
@@ -37,7 +37,7 @@ nav table td {
 }
 
 nav table td:hover {
-  background-color: #ffe44b;
+  background-color: rgb(162, 255, 149);
   transform: scale(1.1);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
@@ -52,7 +52,7 @@ footer {
   width: 100%;
   margin: auto;
   text-align: center;
-  background-color: #ffe65a;
+  background-color: rgb(178, 255, 168);
   align-items: center;
 }
 
