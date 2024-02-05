@@ -75,6 +75,7 @@ footer p {
   margin: 0 auto;
   margin-bottom: 20px;
   text-align: center;
+  text-decoration: none;
 }
 
 .fila {
@@ -93,3 +94,31 @@ a.tarjeta:hover {
   text-decoration: underline;
 }
 
+.tarjeta-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 200px; /* Ancho fijo */
+  height: 200px; /* Alto fijo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tarjeta-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-container img {
+  max-width: 100%;
+  max-height: 80px; /* Altura máxima de la imagen */
+}
+
+.tarjeta-container p {
+  text-align: center;
+  margin: 5px 0;
+  text-decoration: none;
+}

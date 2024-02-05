@@ -367,7 +367,7 @@ document.addEventListener("DOMContentLoaded", function () {
           enlaceTarjeta.appendChild(tarjeta);
 
           // Agregar la tarjeta al contenedor de la fila actual
-          contenedorFilas.lastChild.appendChild(tarjeta);
+          contenedorFilas.lastChild.appendChild(enlaceTarjeta);
         })
         .catch((error) => {
           console.error(
