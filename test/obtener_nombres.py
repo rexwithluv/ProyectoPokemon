@@ -10,7 +10,7 @@ def escribir_nombres_archivos(ruta_directorio, nombre_archivo_salida):
             # Escribir cada nombre de archivo (sin extensión) en una línea
             for nombre_archivo in nombres_archivos:
                 nombre_sin_extension, _ = os.path.splitext(nombre_archivo)
-                archivo_salida.write(f"\"../pokemon/{nombre_sin_extension}.html\"" + ',')
+                archivo_salida.write(f"\"{nombre_sin_extension}\"" + ',')
 
         print(f'Se han escrito los nombres de los archivos (sin extensión) en "{nombre_archivo_salida}".')
 
