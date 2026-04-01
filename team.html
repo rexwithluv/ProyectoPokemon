@@ -10,24 +10,17 @@
   <link rel="stylesheet" href="styles/global.css" />
   <link rel="stylesheet" href="styles/team.css" />
 
-  <script src="random.js"></script>
-  <script src="team.js"></script>
+  <script type="module" src="random.js"></script>
+  <script type="module" src="team.js"></script>
+  <script type="module" src="components/MainFooter.js"></script>
+  <script type="module" src="components/MainNavbar.js"></script>
+
 
   <link rel="shortcut icon" href="images/pokeball-ul-14px.png" type="image/x-icon" />
 </head>
 
 <body>
-  <nav>
-    <table>
-      <tr>
-        <td onclick="random()">Randomizador</td>
-        <td onclick="window.location.href = 'all.html'">Toda la pokédex</td>
-        <td onclick="window.location.href = 'index.html'">Inicio</td>
-        <td onclick="window.location.href = 'team.html'">Equipo</td>
-        <td onclick="window.location.href = 'about-me.html'">Sobre mí</td>
-      </tr>
-    </table>
-  </nav>
+  <main-navbar></main-navbar>
 
   <div id="team">
     <h2>Introduce tu equipo!</h2>
@@ -51,12 +44,7 @@
     </form>
   </div>
 
-  <footer>
-    <p>
-      Web creada por <span id="myself">Aarón A. Rueda</span>, alumno de 1ºDAW para el módulo de
-      LMSXI ^^
-    </p>
-  </footer>
+  <main-footer></main-footer>
 </body>
 
 </html>
