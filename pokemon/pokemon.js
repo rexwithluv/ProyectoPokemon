@@ -123,9 +123,7 @@ function obtenerInformacionPokemon(pokemonName) {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
-      const tiposEnEspanol = data.types.map((type) =>
-        traducirTipo(type.type.name)
-      );
+      const tiposEnEspanol = data.types.map((type) => traducirTipo(type.type.name));
 
       // Muestra la información del Pokémon en la página
       document.getElementById("pokemon-info").innerHTML = `

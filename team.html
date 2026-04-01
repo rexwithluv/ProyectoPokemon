@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es_ES">
   <head>
     <meta charset="UTF-8" />
@@ -6,22 +6,18 @@
     <script src="random.js"></script>
     <script src="team.js"></script>
     <title>Tu propio equipo!</title>
-    <link rel="stylesheet" href="team.css" />
-    <link
-      rel="shortcut icon"
-      href="images/pokeball-ul-14px.png"
-      type="image/x-icon"
-    />
+    <link rel="stylesheet" href="styles/team.css" />
+    <link rel="shortcut icon" href="images/pokeball-ul-14px.png" type="image/x-icon" />
   </head>
   <body>
     <nav>
       <table>
         <tr>
-          <td onclick="random();">Randomizador</td>
-          <td onclick="window.location.href='all.html';">Toda la pokédex</td>
-          <td onclick="window.location.href='index.html';">Inicio</td>
-          <td onclick="window.location.href='team.html';">Equipo</td>
-          <td onclick="window.location.href='about-me.html';">Sobre mí</td>
+          <td onclick="random()">Randomizador</td>
+          <td onclick="window.location.href = 'all.html'">Toda la pokédex</td>
+          <td onclick="window.location.href = 'index.html'">Inicio</td>
+          <td onclick="window.location.href = 'team.html'">Equipo</td>
+          <td onclick="window.location.href = 'about-me.html'">Sobre mí</td>
         </tr>
       </table>
     </nav>
@@ -37,21 +33,21 @@
 
         <label for="pokemonElegido">Pokémon inicial:</label>
         <select id="pokemonElegido" name="pokemonElegido" required>
-            <option value="null">Elige tu inicial!</option>
-            <option value="turtwig">Turtwig</option>
-            <option value="chimchar">Chimchar</option>
-            <option value="piplup">Piplup</option>
+          <option value="null">Elige tu inicial!</option>
+          <option value="turtwig">Turtwig</option>
+          <option value="chimchar">Chimchar</option>
+          <option value="piplup">Piplup</option>
         </select>
 
         <div id="mensaje"></div>
         <button type="button" id="boton">Almacenar</button>
-    </form>
+      </form>
     </div>
 
     <footer>
       <p>
-        Web creada por <span id="myself">Aarón A. Rueda</span>, alumno de 1ºDAW
-        para el módulo de LMSXI ^^
+        Web creada por <span id="myself">Aarón A. Rueda</span>, alumno de 1ºDAW para el módulo de
+        LMSXI ^^
       </p>
     </footer>
   </body>

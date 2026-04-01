@@ -48,6 +48,36 @@ nav a {
   text-decoration: none;
 }
 
+header {
+  text-align: center;
+}
+
+main {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+main h3 {
+  margin-top: -25px;
+}
+
+main ul li {
+  list-style-image: url("images/pokeball-ul-14px.png");
+  margin-bottom: 7px;
+}
+
+main ul li a {
+  color: #4b66ff;
+  transition: transform 0.3s ease-in-out;
+  font-style: italic;
+}
+
+main ul li a:hover {
+  color: #8a4bff;
+  position: relative;
+  bottom: 3px;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -62,21 +92,4 @@ footer {
 #myself {
   font-style: italic;
   text-decoration: underline;
-}
-
-/* A partir de aquí comienza el css hecho para la páigna de los pokémon.
-Todo lo anterior es común a todas las páginas */
-
-#pokemon-info {
-  margin: 0 auto;
-  width: 50vb;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-h1 {
-  text-align: center;
 }

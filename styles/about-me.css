@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Pokemon DP Pro";
-  src: url("fonts/pokemon-dp-pro.ttf") format("truetype");
+  src: url("../fonts/pokemon-dp-pro.ttf") format("truetype");
 }
 
 body {
@@ -12,7 +12,7 @@ body {
 }
 
 nav {
-  background-color: #E4C1F9;
+  background-color: #e4c1f9;
   font-size: 26px;
   letter-spacing: 1px;
   font-weight: 600;
@@ -32,7 +32,10 @@ nav table td {
   height: 50px;
   width: 20%;
   border-collapse: collapse;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 nav table td:hover {
@@ -71,7 +74,7 @@ footer {
   margin: auto;
   text-align: center;
 
-  background-color: #E4C1F9;
+  background-color: #e4c1f9;
 }
 
 #myself {
@@ -100,4 +103,3 @@ footer {
   padding-left: 8px;
   padding-right: 8px;
 }
-

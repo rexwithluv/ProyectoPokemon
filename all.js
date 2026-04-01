@@ -332,10 +332,7 @@ document.addEventListener("DOMContentLoaded", function () {
           nombre.textContent = capitalizarPrimeraLetra(datos.nombre);
 
           const tipo = document.createElement("p");
-          tipo.textContent = datos.tipo
-            .split(", ")
-            .map(traducirTipo)
-            .join(", ");
+          tipo.textContent = datos.tipo.split(", ").map(traducirTipo).join(", ");
 
           // Establecer el fondo de la tarjeta según el tipo primario del Pokémon
           const colorTipo = datos.tipo.split(",")[0];
@@ -344,9 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
           tarjeta.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
           tarjeta.style.margin = "10px"; // Separación entre tarjetas
           tarjeta.style.width = "120px"; // Ancho de la tarjeta
-          tarjeta.style.border = `2px solid ${
-            tiposColores[colorTipo] || "#000000"
-          }`; // Borde más oscuro
+          tarjeta.style.border = `2px solid ${tiposColores[colorTipo] || "#000000"}`; // Borde más oscuro
           tarjeta.style.backgroundColor = `rgba(${parseInt(
             tiposColores[colorTipo].slice(1, 3),
             16
@@ -370,10 +365,7 @@ document.addEventListener("DOMContentLoaded", function () {
           contenedorFilas.lastChild.appendChild(enlaceTarjeta);
         })
         .catch((error) => {
-          console.error(
-            `Error al obtener datos de ${listaNombresPokemon[i]}:`,
-            error
-          );
+          console.error(`Error al obtener datos de ${listaNombresPokemon[i]}:`, error);
           // Puedes mostrar un mensaje de error o tomar medidas adicionales aquí
         });
     }
