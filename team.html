@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="styles/global.css" />
   <link rel="stylesheet" href="styles/team.css" />
 
-  <script type="module" src="random.js"></script>
-  <script type="module" src="team.js"></script>
+  <script type="module" src="scripts/random.js"></script>
+  <script type="module" src="scripts/team.js"></script>
   <script type="module" src="components/MainFooter.js"></script>
   <script type="module" src="components/MainNavbar.js"></script>
 
@@ -24,23 +24,25 @@
 
   <div id="team">
     <h2>Introduce tu equipo!</h2>
-    <form action="get" id="formularioTarjeta">
+    <form action="">
       <label for="trainer-id">ID:</label>
-      <input type="text" id="trainer-id" name="trainer-id" disabled />
+      <input type="text" id="trainer-id" disabled />
 
       <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required />
+      <input type="text" id="trainer-name" required />
 
       <label for="pokemonElegido">Pokémon inicial:</label>
-      <select id="pokemonElegido" name="pokemonElegido" required>
+      <select id="selected-pokemon" required>
         <option value="null">Elige tu inicial!</option>
         <option value="turtwig">Turtwig</option>
         <option value="chimchar">Chimchar</option>
         <option value="piplup">Piplup</option>
       </select>
 
-      <div id="mensaje"></div>
-      <button type="button" id="boton">Almacenar</button>
+      <div id="save-team-message"></div>
+      <button type="button" id="save-team-button">
+        Almacenar en Ciudad Rocavelo
+      </button>
     </form>
   </div>
 

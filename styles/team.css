@@ -17,8 +17,6 @@ footer {
   background-color: var(--team-color-primary);
 }
 
-/* A partir de aquí es exclusivo de este CSS */
-
 form {
   max-width: 400px;
   margin: 20px auto;
@@ -69,14 +67,14 @@ button:hover {
   font-weight: bold;
 }
 
-#mensaje {
+#save-team-message {
   display: none;
   text-align: center;
   margin-top: 10px;
   padding: 10px;
   border-radius: 5px;
-  opacity: 0; /* Inicialmente invisible */
-  animation: fadeInOut 2s ease-in-out; /* Animación de entrada y salida en 4 segundos */
+  opacity: 0;
+  animation: fadeInOut 2s ease-in-out;
   animation-delay: 4s;
   background: linear-gradient(
     45deg,
@@ -87,8 +85,8 @@ button:hover {
     rgb(67, 202, 255),
     rgb(255, 105, 248),
     #dda2ff
-  ); /* Fondo degradado arcoíris */
-  background-size: 400% 400%; /* Tamaño del fondo degradado */
+  );
+  background-size: 400% 400%;
   color: white;
 }
 
@@ -112,8 +110,8 @@ button:hover {
   }
 }
 
-#mensaje.animated {
+#save-team-message.animated {
   animation:
     fadeInOut 4s ease-in-out,
-    rainbowBackground 8s linear infinite; /* Combina ambas animaciones */
+    rainbowBackground 8s linear infinite;
 }
