@@ -1,35 +1,42 @@
 <!doctype html>
 <html lang="es_ES">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="random.js"></script>
-    <title>Toda la pokédex!</title>
-    <link rel="stylesheet" href="styles/all.css" />
-    <script src="all.js"></script>
-    <link rel="shortcut icon" href="images/pokeball-ul-14px.png" type="image/x-icon" />
-  </head>
 
-  <body>
-    <nav>
-      <table>
-        <tr>
-          <td onclick="random()">Randomizador</td>
-          <td onclick="window.location.href = 'all.html'">Toda la pokédex</td>
-          <td onclick="window.location.href = 'index.html'">Inicio</td>
-          <td onclick="window.location.href = 'team.html'">Equipo</td>
-          <td onclick="window.location.href = 'about-me.html'">Sobre mí</td>
-        </tr>
-      </table>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <div id="contenedor-tarjetas"></div>
+  <title>Toda la pokédex!</title>
 
-    <footer>
-      <p>
-        Web creada por <span id="myself">Aarón A. Rueda</span>, alumno de 1ºDAW para el módulo de
-        LMSXI ^^
-      </p>
-    </footer>
-  </body>
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/all.css" />
+
+  <script src="random.js"></script>
+  <script src="all.js"></script>
+
+  <link rel="shortcut icon" href="images/pokeball-ul-14px.png" type="image/x-icon" />
+</head>
+
+<body>
+  <nav>
+    <table>
+      <tr>
+        <td onclick="random()">Randomizador</td>
+        <td onclick="window.location.href = 'all.html'">Toda la pokédex</td>
+        <td onclick="window.location.href = 'index.html'">Inicio</td>
+        <td onclick="window.location.href = 'team.html'">Equipo</td>
+        <td onclick="window.location.href = 'about-me.html'">Sobre mí</td>
+      </tr>
+    </table>
+  </nav>
+
+  <div id="contenedor-tarjetas"></div>
+
+  <footer>
+    <p>
+      Web creada por <span id="myself">Aarón A. Rueda</span>, alumno de 1ºDAW para el módulo de
+      LMSXI ^^
+    </p>
+  </footer>
+</body>
+
 </html>

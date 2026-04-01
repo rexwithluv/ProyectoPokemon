@@ -1,54 +1,9 @@
-@font-face {
-  font-family: "Pokemon DP Pro";
-  src: url("./pokemon-dp-pro.ttf") format("truetype");
-}
-
-* {
-  font-family: "Pokemon DP Pro", sans-serif;
-}
-
-body {
-  font-size: 25px;
-  letter-spacing: 0.5px;
-  margin: 0px;
-  background-color: #fafafa;
-}
-
 nav {
-  background-color: #ff9999;
-  font-size: 26px;
-  letter-spacing: 1px;
-  font-weight: 600;
-}
-
-nav table {
-  height: 75px;
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-
-  border: 0;
-}
-
-nav table td {
-  cursor: pointer;
-  height: 50px;
-  width: 20%;
-  border-collapse: collapse;
-  transition:
-    background-color 0.3s,
-    transform 0.3s,
-    box-shadow 0.3s;
+  background-color: var(--team-color-primary);
 }
 
 nav table td:hover {
-  background-color: #ff7b7b;
-  transform: scale(1.1);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-nav a {
-  text-decoration: none;
+  background-color: var(--team-color-secondary);
 }
 
 footer {
@@ -59,12 +14,7 @@ footer {
   margin: auto;
   text-align: center;
 
-  background-color: #ff9999;
-}
-
-#myself {
-  font-style: italic;
-  text-decoration: underline;
+  background-color: var(--team-color-primary);
 }
 
 /* A partir de aquí es exclusivo de este CSS */
