@@ -1,3 +1,5 @@
+import pokemonArray from "../data/pokemon.js";
+
 class MainNavbar extends HTMLElement {
   constructor() {
     super();
@@ -8,7 +10,7 @@ class MainNavbar extends HTMLElement {
       <nav>
         <table>
           <tr>
-            <td onclick="random()">Randomizador</td>
+            <td id="random-button">Randomizador</td>
             <td onclick="window.location.href = 'all.html'">Toda la pokédex</td>
             <td onclick="window.location.href = 'index.html'">Inicio</td>
             <td onclick="window.location.href = 'team.html'">Equipo</td>
@@ -17,6 +19,11 @@ class MainNavbar extends HTMLElement {
         </table>
       </nav>
     `;
+
+    this.querySelector("#random-button").addEventListener("click", () => {
+      const randomPokemon = pokemonArray[Math.floor(Math.random() * pokemonArray.length)];
+      window.location.href = `pokemon.html?pokemon=${randomPokemon}`;
+    });
   }
 }
 

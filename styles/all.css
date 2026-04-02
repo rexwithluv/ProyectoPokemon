@@ -25,8 +25,6 @@ footer p {
   top: 22px;
 }
 
-/* CSS personalizado para las tarjetas */
-
 #contenedor-tarjetas {
   display: flex;
   flex-wrap: wrap;
@@ -46,7 +44,7 @@ footer p {
 
 a.tarjeta {
   text-decoration: none;
-  color: #333; /* Cambia esto al color que desees para los enlaces */
+  color: #333;
 }
 
 a.tarjeta:hover {
@@ -60,8 +58,8 @@ a.tarjeta:hover {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  width: 200px; /* Ancho fijo */
-  height: 200px; /* Alto fijo */
+  width: 200px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +73,7 @@ a.tarjeta:hover {
 
 .tarjeta-container img {
   max-width: 100%;
-  max-height: 80px; /* Altura máxima de la imagen */
+  max-height: 80px;
 }
 
 .tarjeta-container p {

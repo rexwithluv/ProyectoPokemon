@@ -20,7 +20,7 @@ main h3 {
 }
 
 main ul li {
-  list-style-image: url("images/pokeball-ul-14px.png");
+  list-style-image: url("../images/pokeball-ul-14px.png");
   margin-bottom: 7px;
 }
 

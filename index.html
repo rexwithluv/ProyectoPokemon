@@ -7,20 +7,19 @@
 
   <title>Inicio</title>
 
-
   <link rel="stylesheet" href="styles/global.css" />
   <link rel="stylesheet" href="styles/index.css" />
 
-  <script type="module" src="scripts/random.js"></script>
+  <script type="module" src="scripts/index.js"></script>
+
   <script type="module" src="components/MainFooter.js"></script>
   <script type="module" src="components/MainNavbar.js"></script>
 
-  <link rel="shortcut icon" href="images/pokeball-ul-14px.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="./images/pokeball-ul-14px.png" type="image/x-icon" />
 </head>
 
 <body>
   <main-navbar></main-navbar>
-
 
   <main>
     <header>
@@ -30,23 +29,37 @@
 
     <h5>Existen 5 páginas:</h5>
     <ul>
-      <li><a href="index.html">Inicio</a>:Estás aquí ahora mismo!</li>
       <li>
-        <a href="all.html">Toda la pokédex:</a> Aquí se mostrarán todos los Pokémon de Sinnoh,
-        versión Platino!
+        <a href="index.html">
+          Inicio
+        </a>
+        : Estás aquí ahora mismo!
       </li>
       <li>
-        <a href="team.html">Equipo:</a> Un formulario donde podrás introducir tu equipo y lo
-        guardaremos en nuestra base de datos situada en Ciudad Vetusta, en el garaje del edificio
-        del equipo Plasma.
+        <a href="all.html">
+          Toda la pokédex
+        </a>
+        : Aquí se mostrarán todos los Pokémon de Sinnoh, versión Platino!
       </li>
       <li>
-        <a href="#" onclick="random()">Randomizador:</a> Te apetece ver algún pokémon de la región
-        pero no sabes cuál? Dale click para que te lleve a una página aleatoria!
+        <a href="team.html">
+          Equipo
+        </a>
+        : Un formulario donde podrás introducir tu equipo y lo guardaremos en nuestra base de datos situada en Ciudad
+        Rocavelo, en el garaje del edificio del equipo Galaxia.
       </li>
       <li>
-        <a href="about-me.html">Sobre mí:</a> La típica página de relleno que no mira NADIE sobre
-        el creador de la página. (It's me, hi!)
+        <a href="#" onclick="random()" id="random-a-tag">
+          Randomizador
+        </a>
+        : Te apetece ver algún Pokémon de la región pero no sabes cuál? Dale click para que te lleve a una página
+        aleatoria!
+      </li>
+      <li>
+        <a href="about-me.html">
+          Sobre mí
+        </a>
+        : La típica página de relleno que no mira NADIE sobre el creador de la página. (It's me, hi!)
       </li>
     </ul>
   </main>

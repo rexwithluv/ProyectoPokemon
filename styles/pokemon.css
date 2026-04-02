@@ -1,0 +1,32 @@
+nav {
+  background-color: var(--pokemon-color-primary);
+}
+
+nav table td:hover {
+  background-color: var(--pokemon-color-secondary);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+  background-color: var(--pokemon-color-primary);
+}
+
+#pokemon-info {
+  margin: 0 auto;
+  width: 50vb;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}

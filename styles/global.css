@@ -10,6 +10,9 @@
 
   --team-color-primary: #ff9999;
   --team-color-secondary: #ff7b7b;
+
+  --pokemon-color-primary: #ffe65a;
+  --pokemon-color-secondary: #ffe44b;
 }
 
 @font-face {
