@@ -1,6 +1,6 @@
 # ProyectoPokémon
 
-Uno de mis primeros proyectos mientras comenzaba a estudiar programación y desarrollo web. Ahora, tiempo después, he decidido *refactorizarlo* con los conocimientos que he adquirido, tratando de mantener el *stack tecnológico* que se impuso en su momento como requisito (HTML5, CSS3; JS vanilla de forma opcional).
+Uno de mis primeros proyectos mientras comenzaba a estudiar programación y desarrollo web. Ahora, tiempo después, he decidido _refactorizarlo_ con los conocimientos que he adquirido, tratando de mantener el _stack tecnológico_ que se impuso en su momento como requisito (HTML5, CSS3; JS vanilla de forma opcional).
 
 ## Mejoras implementadas
 
@@ -19,6 +19,6 @@ Creo que no siempre que elegimos refactorizar un proyecto este debe cambiar cara
 
 ## ¿Para qué sirve exactamente este proyecto?
 
-Literalmente nada. No hay más. El reto del trabajo era construir una página "atractiva" usando el stack vanilla y base del resto de tecnologías que se usan en el mercado actualmente para el *frontend*. Sirve únicamente para ver información consultando la [PokeApi](https://pokeapi.co/).
+Literalmente nada. No hay más. El reto del trabajo era construir una página "atractiva" usando el stack vanilla y base del resto de tecnologías que se usan en el mercado actualmente para el _frontend_. Sirve únicamente para ver información consultando la [PokeApi](https://pokeapi.co/).
 
 > Dedicado a Jeny, mi profesora LMSXI para la que presenté este proyecto. Gracias por nunca dejar de creer en mí y en mi valía para esto, gracias por ser una docente increíble.

@@ -79,7 +79,6 @@ async function main() {
   const data = await response.json();
 
   const pokemonCard = document.querySelector("pokemon-card");
-  console.log(pokemonCard)
   pokemonCard.pokemonData = data;
 
   setBackgroundColorByType(data.types.map((type) => type.type.name));
