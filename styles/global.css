@@ -29,6 +29,8 @@ body {
   letter-spacing: 0.5px;
   margin: 0px;
   background-color: #fafafa;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 nav {
@@ -66,7 +68,18 @@ nav a {
   text-decoration: none;
 }
 
-#myself {
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+  background-color: var(--about-me-color-primary);
+}
+
+.myself {
   font-style: italic;
   text-decoration: underline;
 }

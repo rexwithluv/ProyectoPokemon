@@ -8,7 +8,7 @@ class MainFooter extends HTMLElement {
       <footer>
         <p>
           Web creada por
-            <span id="myself">
+            <span class="myself">
               Aarón A. Rueda
             </span>
           , alumno de 1ºDAW para el módulo de LMSXI ^^
