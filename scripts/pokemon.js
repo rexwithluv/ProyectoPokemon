@@ -1,114 +1,88 @@
-import { translateTypeName, capitalize } from "./utils.js";
+import { capitalize } from "./utils.js";
+import typeColors from "../data/type-color.js";
 
-function obtenerInformacionPokemon(pokemonName) {
-  function asignarFondoSegunTipo(tipos) {
-    const coloresPorTipo = {
-      normal: "#a8a878",
-      fighting: "#c03028",
-      flying: "#a890f0",
-      poison: "#a040a0",
-      ground: "#e0c068",
-      rock: "#b8a038",
-      bug: "#a8b820",
-      ghost: "#705898",
-      steel: "#b8b8d0",
-      fire: "#f08030",
-      water: "#6890f0",
-      grass: "#78c850",
-      electric: "#f8d030",
-      psychic: "#f85888",
-      ice: "#98d8d8",
-      dragon: "#7038f8",
-      dark: "#705848",
-      fairy: "#ee99ac",
-    };
+export function darkenColor(color) {
+  const cant = 25;
 
-    function oscurecerColor(color, cant) {
-      //voy a extraer las tres partes del color
-      var rojo = color.substr(1, 2);
-      var verd = color.substr(3, 2);
-      var azul = color.substr(5, 2);
+  let red = color.substr(1, 2);
+  let green = color.substr(3, 2);
+  let blue = color.substr(5, 2);
 
-      //voy a convertir a enteros los string, que tengo en hexadecimal
-      var introjo = parseInt(rojo, 16);
-      var intverd = parseInt(verd, 16);
-      var intazul = parseInt(azul, 16);
+  let deepRed = parseInt(red, 16);
+  let deepGreen = parseInt(green, 16);
+  let deepBlue = parseInt(blue, 16);
 
-      //ahora verifico que no quede como negativo y resto
-      if (introjo - cant >= 0) introjo = introjo - cant;
-      if (intverd - cant >= 0) intverd = intverd - cant;
-      if (intazul - cant >= 0) intazul = intazul - cant;
+  if (deepRed - cant >= 0) {
+    deepRed = deepRed - cant;
+  }
+  if (deepGreen - cant >= 0) {
+    deepGreen = deepGreen - cant;
+  }
+  if (deepBlue - cant >= 0) {
+    deepBlue = deepBlue - cant;
+  }
 
-      //voy a convertir a hexadecimal, lo que tengo en enteros
-      rojo = introjo.toString(16);
-      verd = intverd.toString(16);
-      azul = intazul.toString(16);
+  red = deepRed.toString(16);
+  green = deepGreen.toString(16);
+  blue = deepBlue.toString(16);
 
-      //voy a validar que los string hexadecimales tengan dos caracteres
-      if (rojo.length < 2) rojo = "0" + rojo;
-      if (verd.length < 2) verd = "0" + verd;
-      if (azul.length < 2) azul = "0" + azul;
+  if (red.length < 2) red = "0" + red;
+  if (green.length < 2) green = "0" + green;
+  if (blue.length < 2) blue = "0" + blue;
 
-      //voy a construir el color hexadecimal
-      var oscuridad = "#" + rojo + verd + azul;
+  const dark = "#" + red + green + blue;
 
-      //la función devuelve el valor del color hexadecimal resultante
-      return oscuridad;
-    }
+  return dark;
+}
 
-    // Mapea los tipos a los colores correspondientes
-    const coloresTipos = tipos.map((tipo) => coloresPorTipo[tipo]);
+export function setBackgroundColorByType(tipos) {
+  const coloresTipos = tipos.map((type) => typeColors[type]);
 
-    // Almacena los colores en variables independientes
-    const color1 = coloresTipos[0] || "#ffffff"; // Fallback a verde si no hay colores
-    const color2 = coloresTipos[1] || coloresTipos[0];
+  const color1 = coloresTipos[0];
+  const color2 = coloresTipos[1] || coloresTipos[0];
 
-    // Construye la cadena para el linear-gradient
+  const contenedorPokemonInfo = document.getElementById("pokemon-info");
+  if (color1 === color2) {
+    contenedorPokemonInfo.style.backgroundColor = color1;
+  } else {
     const gradient = `linear-gradient(to right, ${color1} 50%, ${color2} 50%)`;
-
-    // Aplica el fondo al contenedor
-    const contenedorPokemonInfo = document.getElementById("pokemon-info");
     contenedorPokemonInfo.style.background = gradient;
+  }
 
-    const nav = document.getElementById("nav");
-    nav.style.backgroundColor = color1;
+  const nav = document.getElementsByTagName("nav")[0];
+  nav.style.backgroundColor = color1;
 
-    // Define un estilo CSS para el nav y su estado :hover
-    const colorOscuro = oscurecerColor(color1, 25);
-    const navStyles = `
+  const colorOscuro = darkenColor(color1);
+  const navStyles = `
       nav table td:hover {
           background-color: ${colorOscuro};
-  }
-  `;
+      }`;
 
-    // Crea un nuevo estilo y lo agrega al head del documento
-    const styleElement = document.createElement("style");
-    styleElement.innerHTML = navStyles;
-    document.head.appendChild(styleElement);
+  const styleElement = document.createElement("style");
+  styleElement.innerHTML = navStyles;
+  document.head.appendChild(styleElement);
 
-    const footer = document.getElementById("footer");
-    footer.style.backgroundColor = color2;
-  }
+  const footer = document.getElementsByTagName("footer")[0];
+  footer.style.backgroundColor = color2;
+}
+
+async function main() {
+  const params = new URLSearchParams(window.location.search);
+  const pokemonName = params.get("pokemon");
+  const capitalizedPokemonName = capitalize(pokemonName);
+
+  document.title += ` ${capitalizedPokemonName}!`;
+  document.getElementById("pokemon-title").textContent += capitalizedPokemonName;
 
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonName}/`;
-  document.title = `Pokémon... ${capitalize(pokemonName)}!`;
+  const response = await fetch(apiUrl);
+  const data = await response.json();
 
-  fetch(apiUrl)
-    .then((response) => response.json())
-    .then((data) => {
-      const tiposEnEspanol = data.types.map((type) => translateTypeName(type.type.name));
+  const pokemonCard = document.querySelector("pokemon-card");
+  console.log(pokemonCard)
+  pokemonCard.pokemonData = data;
 
-      // Muestra la información del Pokémon en la página
-      document.getElementById("pokemon-info").innerHTML = `
-            <h2>${capitalize(data.name)}</h2>
-            <img src="${data.sprites.front_default}" alt="${data.name}">
-            <p>Altura: ${data.height}</p>
-            <p>Peso: ${data.weight}</p>
-            <p>Tipo(s): ${tiposEnEspanol.join(", ")}</p>
-          `;
-
-      // Asigna el fondo de la página según el tipo o tipos del Pokémon
-      asignarFondoSegunTipo(data.types.map((type) => type.type.name));
-    })
-    .catch((error) => console.error("Error al obtener datos:", error));
+  setBackgroundColorByType(data.types.map((type) => type.type.name));
 }
+
+main().catch(console.error);

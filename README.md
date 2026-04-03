@@ -6,12 +6,12 @@ Uno de mis primeros proyectos mientras comenzaba a estudiar programación y desa
 
 Puede verse **la versión que entregué como primer proyecto de la asignatura de LMSXI [aquí](https://github.com/rexwithluv/ProyectoPokemon/tree/old)** (he creado una rama que ha quedado congelada en el tiempo).
 
-- Implementación de WebComponents
+- Implementación de [WebComponents](https://developer.mozilla.org/es/docs/Web/API/Web_components)
 - Centralización de estilos para evitar redundancia
 - Organización de archivos en directorios
-- Implementación de un formateador de código (Prettier)
+- Implementación de un formateador de código ([Prettier](https://prettier.io/))
 - Creación de un README.md
-- Uso de K8S en un VPS propio en lugar de Vercel
+- Uso de K8S en un VPS propio en lugar de [Vercel](https://vercel.com/docs)
 
 ## Pero la versión vieja y la nueva son casi idénticas, ¿por qué no cambiarla por completo?
 
@@ -20,3 +20,5 @@ Creo que no siempre que elegimos refactorizar un proyecto este debe cambiar cara
 ## ¿Para qué sirve exactamente este proyecto?
 
 Literalmente nada. No hay más. El reto del trabajo era construir una página "atractiva" usando el stack vanilla y base del resto de tecnologías que se usan en el mercado actualmente para el *frontend*. Sirve únicamente para ver información consultando la [PokeApi](https://pokeapi.co/).
+
+> Dedicado a Jeny, mi profesora LMSXI para la que presenté este proyecto. Gracias por nunca dejar de creer en mí y en mi valía para esto, gracias por ser una docente increíble.
