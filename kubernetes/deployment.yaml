@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proyecto-pokemon
+  namespace: proyecto-pokemon
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: proyecto-pokemon
+  template:
+    metadata:
+      labels:
+        app: proyecto-pokemon
+    spec:
+      containers:
+        - name: nginx
+          image: ghcr.io/rexwithluv/proyecto-pokemon:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

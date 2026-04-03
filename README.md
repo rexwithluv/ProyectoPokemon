@@ -11,6 +11,7 @@ Puede verse **la versión que entregué como primer proyecto de la asignatura de
 - Organización de archivos en directorios
 - Implementación de un formateador de código (Prettier)
 - Creación de un README.md
+- Uso de K8S en un VPS propio en lugar de Vercel
 
 ## Pero la versión vieja y la nueva son casi idénticas, ¿por qué no cambiarla por completo?
 
