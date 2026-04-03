@@ -7,13 +7,6 @@ nav table td:hover {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  height: 75px;
-  width: 100%;
-  margin: auto;
-  text-align: center;
-
   background-color: var(--team-color-primary);
 }
 
@@ -57,17 +50,17 @@ button:hover {
   transform: scale(1.05);
 }
 
-#team h2 {
+.team h2 {
   text-align: center;
 }
 
-#trainer-id {
+.trainer-id {
   font-size: 25px;
   text-align: center;
   font-weight: bold;
 }
 
-#save-team-message {
+.save-team-message {
   display: none;
   text-align: center;
   margin-top: 10px;
@@ -110,7 +103,7 @@ button:hover {
   }
 }
 
-#save-team-message.animated {
+.save-team-message.animated {
   animation:
     fadeInOut 4s ease-in-out,
     rainbowBackground 8s linear infinite;

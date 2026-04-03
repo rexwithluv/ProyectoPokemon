@@ -11,13 +11,7 @@ nav table td:hover {
 }
 
 footer {
-  bottom: 0;
-  height: 75px;
-  width: 100%;
-  margin: auto;
-  text-align: center;
   background-color: var(--all-pokedex-color-primary);
-  align-items: center;
 }
 
 footer p {
@@ -25,7 +19,7 @@ footer p {
   top: 22px;
 }
 
-#contenedor-tarjetas {
+.cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

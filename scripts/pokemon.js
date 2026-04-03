@@ -72,7 +72,7 @@ async function main() {
   const capitalizedPokemonName = capitalize(pokemonName);
 
   document.title += ` ${capitalizedPokemonName}!`;
-  document.getElementById("pokemon-title").textContent += capitalizedPokemonName;
+  document.getElementById("pokemon-title").textContent += ` ${capitalizedPokemonName}`;
 
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonName}/`;
   const response = await fetch(apiUrl);

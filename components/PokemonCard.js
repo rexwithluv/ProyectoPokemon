@@ -14,7 +14,7 @@ class PokemonCard extends HTMLElement {
     const types = data.types.map((type) => translateTypeName(type.type.name)).join(", ");
 
     this.innerHTML = `
-      <div id="pokemon-info">
+      <div class="pokemon-info" id="pokemon-info">
         <h2 id="pokemon-name">${name}</h2>
         <img src="${image}" alt="${altImage}" id="pokemon-image">
         <p id="pokemon-height">Altura: ${height}</p>
